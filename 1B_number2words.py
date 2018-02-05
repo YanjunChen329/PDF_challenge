@@ -132,7 +132,7 @@ def run():
             numbers = sys.argv[1]
             for number in numbers:
                 x = int(number)
-        except TypeError:
+        except TypeError or ValueError:
             print "Illegal input. Input should be a string of number"
             return None
         print convert_number_to_words(numbers)
