@@ -47,6 +47,8 @@ professor
 
 ### How it works
 The project is inspired by [DialABC](http://dialabc.com/about/). It uses the number-letter mapping in phone keypads as the conversion standard and try to substitute as many numbers as possible with meaningful words. <br /><br />
+![alt_text](https://www.geeksforgeeks.org/wp-content/uploads/phoneKeyboard.png)
+<br /><br />
 In this project, I define an optimal solution as converting the most numbers in the string into letters. To get the optimal solution, I use dynamic programming to build up a matrix, in which each entry M[i,j] denotes the most numbers converted in a substring[i:] of the input string that includes converting the substring[i:j] into words. To get the largest number of number converted, we only need to find the maximum value in row 0 of the matrix. Then, we use traceback to trace back the optimal path and do the conversion during the meantime. <br /><br />
 To determine whether a "word" is meaningful, I use [google-10000-words](https://github.com/first20hours/google-10000-english) github repo by first20hour and made some edition. The file is named "google-10000-english-edited.txt" in my repo. In the implementation, I have a function that generates all combinations of letters represented by a given number string, and filter out the those that are not in the dictionary.<br />
 
