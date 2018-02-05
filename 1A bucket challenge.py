@@ -80,14 +80,14 @@ class MyTest(unittest.TestCase):
 
 def run():
     if len(sys.argv) != 3:
-        print "Need 2 arguments!"
+        print "Wrong number of arguments! Need 2."
         return None
     else:
         try:
             buckets = list(json.loads(sys.argv[1]))
             target = int(sys.argv[2])
         except TypeError:
-            print "Illegal inputs"
+            print "Illegal inputs. Inputs should be a list of number and an integer"
             return None
         print bucket_challenge(buckets, target)
 
