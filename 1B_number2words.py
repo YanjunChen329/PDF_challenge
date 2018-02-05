@@ -124,6 +124,9 @@ def run():
     if len(sys.argv) != 2:
         print "Wrong number of argument! Need 1."
         return None
+    elif len(sys.argv[1]) < 2:
+        print "Input should be a number string longer than 1"
+        return None
     else:
         try:
             numbers = sys.argv[1]
